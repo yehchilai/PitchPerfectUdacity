@@ -400,6 +400,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = PitchPerfectUdacity/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.iamhomebody.PitchPerfectUdacity;
@@ -411,6 +412,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = PitchPerfectUdacity/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.iamhomebody.PitchPerfectUdacity;
@@ -485,6 +487,7 @@
 				FF085D641BEE024A00CF68F3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		FF085D651BEE024A00CF68F3 /* Build configuration list for PBXNativeTarget "PitchPerfectUdacityTests" */ = {
 			isa = XCConfigurationList;
@@ -493,6 +496,7 @@
 				FF085D671BEE024A00CF68F3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		FF085D681BEE024A00CF68F3 /* Build configuration list for PBXNativeTarget "PitchPerfectUdacityUITests" */ = {
 			isa = XCConfigurationList;
@@ -501,6 +505,7 @@
 				FF085D6A1BEE024A00CF68F3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
