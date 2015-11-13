@@ -20,6 +20,12 @@ class ViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
 
+    @IBAction func recordAudio(sender: UIButton) {
+        //TODO: show text "recording in progress"
+        //TODO: record the user's voice
+        print("in recordAudio...");
+        
+    }
 
 }
 
