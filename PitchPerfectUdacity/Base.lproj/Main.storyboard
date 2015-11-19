@@ -118,22 +118,59 @@
                                     <rect key="frame" x="44" y="98" width="100" height="100"/>
                                 </variation>
                             </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ciR-sZ-FZ2" userLabel="fastButton">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <state key="normal" image="fastButton"/>
+                                <connections>
+                                    <action selector="playFastSound:" destination="a8N-la-bpd" eventType="touchUpInside" id="xfy-Tt-Ddg"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5ws-cg-MTP" userLabel="stopButton">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <state key="normal" image="stopButton"/>
+                                <variation key="widthClass=compact" misplaced="YES">
+                                    <rect key="frame" x="175" y="462" width="50" height="50"/>
+                                </variation>
+                                <connections>
+                                    <action selector="stopSound:" destination="a8N-la-bpd" eventType="touchUpInside" id="QTo-um-mVf"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="ktu-cv-pIi" firstAttribute="top" secondItem="xnt-h6-8IE" secondAttribute="bottom" constant="34" id="CSL-Wt-MVu"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="ciR-sZ-FZ2" secondAttribute="trailing" constant="38" id="Om8-7U-by1"/>
+                            <constraint firstItem="ciR-sZ-FZ2" firstAttribute="top" secondItem="xnt-h6-8IE" secondAttribute="bottom" constant="34" id="ebo-73-eKA"/>
+                            <constraint firstItem="5ws-cg-MTP" firstAttribute="centerX" secondItem="UL4-41-g9d" secondAttribute="centerX" id="npf-QX-1ot"/>
+                            <constraint firstItem="yUs-Sm-sG1" firstAttribute="top" secondItem="5ws-cg-MTP" secondAttribute="bottom" constant="98" id="pD0-wQ-8Qu"/>
                             <constraint firstItem="ktu-cv-pIi" firstAttribute="leading" secondItem="UL4-41-g9d" secondAttribute="leadingMargin" constant="24" id="z10-mx-OKQ"/>
                         </constraints>
                         <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="ciR-sZ-FZ2"/>
+                                <exclude reference="5ws-cg-MTP"/>
+                            </mask>
                             <mask key="constraints">
                                 <exclude reference="CSL-Wt-MVu"/>
                                 <exclude reference="z10-mx-OKQ"/>
+                                <exclude reference="Om8-7U-by1"/>
+                                <exclude reference="ebo-73-eKA"/>
+                                <exclude reference="npf-QX-1ot"/>
+                                <exclude reference="pD0-wQ-8Qu"/>
                             </mask>
                         </variation>
                         <variation key="widthClass=compact">
+                            <mask key="subviews">
+                                <include reference="ciR-sZ-FZ2"/>
+                                <include reference="5ws-cg-MTP"/>
+                            </mask>
                             <mask key="constraints">
                                 <include reference="CSL-Wt-MVu"/>
                                 <include reference="z10-mx-OKQ"/>
+                                <include reference="Om8-7U-by1"/>
+                                <include reference="ebo-73-eKA"/>
+                                <include reference="npf-QX-1ot"/>
+                                <include reference="pD0-wQ-8Qu"/>
                             </mask>
                         </variation>
                     </view>
@@ -162,6 +199,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="fastButton" width="100" height="100"/>
         <image name="microphone" width="100" height="100"/>
         <image name="slowButton" width="100" height="100"/>
         <image name="stopButton" width="50" height="50"/>

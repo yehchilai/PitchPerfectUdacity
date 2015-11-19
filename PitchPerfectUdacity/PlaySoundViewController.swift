@@ -16,9 +16,10 @@ class PlaySoundViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-        if var filePath = NSBundle.mainBundle().pathForResource("movie_quote", ofType: "mp3"){
-            var filePathUrl = NSURL.fileURLWithPath(filePath)
+        if let filePath = NSBundle.mainBundle().pathForResource("movie_quote", ofType: "mp3"){
+            let filePathUrl = NSURL.fileURLWithPath(filePath)
             audioPlayer = try?AVAudioPlayer(contentsOfURL: filePathUrl)
+            audioPlayer.enableRate = true
         }else
         {
             print("The path is empty.")
@@ -31,10 +32,25 @@ class PlaySoundViewController: UIViewController {
     }
     
     @IBAction func playSlowSound(sender: UIButton) {
-        //TODO: Play slow sound
-        audioPlayer.play()
+        playSound(0.5)
     }
 
+    @IBAction func playFastSound(sender: UIButton) {
+        playSound(1.5)
+    }
+    
+    @IBAction func stopSound(sender: UIButton) {
+        audioPlayer.stop()
+    }
+    
+    func playSound(rate : float_t)
+    {
+        audioPlayer.stop()
+        audioPlayer.rate = rate
+        audioPlayer.currentTime = 0.0
+        audioPlayer.play()
+    }
+    
     /*
     // MARK: - Navigation
 
