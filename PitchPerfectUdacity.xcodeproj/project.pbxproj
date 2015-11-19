@@ -14,6 +14,8 @@
 		FF085D481BEE024A00CF68F3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FF085D461BEE024A00CF68F3 /* LaunchScreen.storyboard */; };
 		FF085D531BEE024A00CF68F3 /* PitchPerfectUdacityTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF085D521BEE024A00CF68F3 /* PitchPerfectUdacityTests.swift */; };
 		FF085D5E1BEE024A00CF68F3 /* PitchPerfectUdacityUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF085D5D1BEE024A00CF68F3 /* PitchPerfectUdacityUITests.swift */; };
+		FFBEF3D11BF6289C00E1E80D /* PlaySoundViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFBEF3D01BF6289C00E1E80D /* PlaySoundViewController.swift */; };
+		FFBEF3D41BF9D4B800E1E80D /* movie_quote.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = FFBEF3D31BF9D4B800E1E80D /* movie_quote.mp3 */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +49,8 @@
 		FF085D591BEE024A00CF68F3 /* PitchPerfectUdacityUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PitchPerfectUdacityUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		FF085D5D1BEE024A00CF68F3 /* PitchPerfectUdacityUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PitchPerfectUdacityUITests.swift; sourceTree = "<group>"; };
 		FF085D5F1BEE024A00CF68F3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FFBEF3D01BF6289C00E1E80D /* PlaySoundViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlaySoundViewController.swift; sourceTree = "<group>"; };
+		FFBEF3D31BF9D4B800E1E80D /* movie_quote.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = movie_quote.mp3; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,9 +104,11 @@
 				FF085D3D1BEE024A00CF68F3 /* AppDelegate.swift */,
 				FF085D3F1BEE024A00CF68F3 /* ViewController.swift */,
 				FF085D411BEE024A00CF68F3 /* Main.storyboard */,
+				FFBEF3D01BF6289C00E1E80D /* PlaySoundViewController.swift */,
 				FF085D441BEE024A00CF68F3 /* Assets.xcassets */,
 				FF085D461BEE024A00CF68F3 /* LaunchScreen.storyboard */,
 				FF085D491BEE024A00CF68F3 /* Info.plist */,
+				FFBEF3D21BF9D48300E1E80D /* Supporting Files */,
 			);
 			path = PitchPerfectUdacity;
 			sourceTree = "<group>";
@@ -123,6 +129,14 @@
 				FF085D5F1BEE024A00CF68F3 /* Info.plist */,
 			);
 			path = PitchPerfectUdacityUITests;
+			sourceTree = "<group>";
+		};
+		FFBEF3D21BF9D48300E1E80D /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				FFBEF3D31BF9D4B800E1E80D /* movie_quote.mp3 */,
+			);
+			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -234,6 +248,7 @@
 			files = (
 				FF085D481BEE024A00CF68F3 /* LaunchScreen.storyboard in Resources */,
 				FF085D451BEE024A00CF68F3 /* Assets.xcassets in Resources */,
+				FFBEF3D41BF9D4B800E1E80D /* movie_quote.mp3 in Resources */,
 				FF085D431BEE024A00CF68F3 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -260,6 +275,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FF085D401BEE024A00CF68F3 /* ViewController.swift in Sources */,
+				FFBEF3D11BF6289C00E1E80D /* PlaySoundViewController.swift in Sources */,
 				FF085D3E1BEE024A00CF68F3 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
