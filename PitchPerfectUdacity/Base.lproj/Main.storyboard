@@ -3,13 +3,14 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9049"/>
+        <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--Record-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="PitchPerfectUdacity" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="RecordsoundsViewController" customModule="PitchPerfectUdacity" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -37,7 +38,6 @@
                                 <state key="normal" image="stopButton"/>
                                 <connections>
                                     <action selector="stopRecording:" destination="BYZ-38-t0r" eventType="touchUpInside" id="m5a-31-a1B"/>
-                                    <segue destination="a8N-la-bpd" kind="show" id="P31-ih-aP0"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -59,10 +59,10 @@
                             <mask key="constraints">
                                 <exclude reference="25O-Sb-CdD"/>
                                 <exclude reference="HJz-c8-Xgx"/>
-                                <exclude reference="BdO-1f-kbE"/>
-                                <exclude reference="rnG-vN-eRv"/>
                                 <exclude reference="7jY-qP-7bc"/>
                                 <exclude reference="zeo-F9-kom"/>
+                                <exclude reference="BdO-1f-kbE"/>
+                                <exclude reference="rnG-vN-eRv"/>
                             </mask>
                         </variation>
                         <variation key="widthClass=compact">
@@ -74,10 +74,10 @@
                             <mask key="constraints">
                                 <include reference="25O-Sb-CdD"/>
                                 <include reference="HJz-c8-Xgx"/>
-                                <include reference="BdO-1f-kbE"/>
-                                <include reference="rnG-vN-eRv"/>
                                 <include reference="7jY-qP-7bc"/>
                                 <include reference="zeo-F9-kom"/>
+                                <include reference="BdO-1f-kbE"/>
+                                <include reference="rnG-vN-eRv"/>
                             </mask>
                         </variation>
                     </view>
@@ -86,6 +86,7 @@
                         <outlet property="recordButton" destination="1CS-Bp-LR6" id="7Gv-8W-Vdj"/>
                         <outlet property="recordingInProgress" destination="nok-zy-q9z" id="GVz-6W-hJW"/>
                         <outlet property="stopButton" destination="pVQ-Jb-IaJ" id="hCz-Rc-ACc"/>
+                        <segue destination="a8N-la-bpd" kind="show" identifier="stopRecording" id="Kvy-0g-lFc"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -101,13 +102,14 @@
                         <viewControllerLayoutGuide type="bottom" id="yUs-Sm-sG1"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="UL4-41-g9d">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aD4-m3-QL3">
-                                <rect key="frame" x="24" y="78" width="140" height="140"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="aD4-m3-QL3">
+                                <rect key="frame" x="24" y="78" width="100" height="100"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ktu-cv-pIi" userLabel="slowButton">
-                                        <rect key="frame" x="20" y="20" width="100" height="100"/>
+                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ktu-cv-pIi" userLabel="slowButton">
+                                        <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
                                         <state key="normal" image="slowButton"/>
                                         <connections>
                                             <action selector="playSlowSound:" destination="a8N-la-bpd" eventType="touchUpInside" id="Mj7-Bl-eek"/>
@@ -128,9 +130,6 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5ws-cg-MTP" userLabel="stopButton">
                                 <rect key="frame" x="-23" y="-15" width="46" height="30"/>
                                 <state key="normal" image="stopButton"/>
-                                <variation key="widthClass=compact" misplaced="YES">
-                                    <rect key="frame" x="175" y="462" width="50" height="50"/>
-                                </variation>
                                 <connections>
                                     <action selector="stopSound:" destination="a8N-la-bpd" eventType="touchUpInside" id="QTo-um-mVf"/>
                                 </connections>
@@ -151,11 +150,11 @@
                                 <exclude reference="5ws-cg-MTP"/>
                             </mask>
                             <mask key="constraints">
-                                <exclude reference="CSL-Wt-MVu"/>
-                                <exclude reference="z10-mx-OKQ"/>
+                                <exclude reference="npf-QX-1ot"/>
                                 <exclude reference="Om8-7U-by1"/>
                                 <exclude reference="ebo-73-eKA"/>
-                                <exclude reference="npf-QX-1ot"/>
+                                <exclude reference="CSL-Wt-MVu"/>
+                                <exclude reference="z10-mx-OKQ"/>
                                 <exclude reference="pD0-wQ-8Qu"/>
                             </mask>
                         </variation>
@@ -165,11 +164,11 @@
                                 <include reference="5ws-cg-MTP"/>
                             </mask>
                             <mask key="constraints">
-                                <include reference="CSL-Wt-MVu"/>
-                                <include reference="z10-mx-OKQ"/>
+                                <include reference="npf-QX-1ot"/>
                                 <include reference="Om8-7U-by1"/>
                                 <include reference="ebo-73-eKA"/>
-                                <include reference="npf-QX-1ot"/>
+                                <include reference="CSL-Wt-MVu"/>
+                                <include reference="z10-mx-OKQ"/>
                                 <include reference="pD0-wQ-8Qu"/>
                             </mask>
                         </variation>
