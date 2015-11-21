@@ -134,11 +134,20 @@
                                     <action selector="stopSound:" destination="a8N-la-bpd" eventType="touchUpInside" id="QTo-um-mVf"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0jZ-y8-0jZ" userLabel="chipmunkButton">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <state key="normal" image="chipmunk"/>
+                                <connections>
+                                    <action selector="playChipmunkSound:" destination="a8N-la-bpd" eventType="touchUpInside" id="DFh-el-PWf"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="ktu-cv-pIi" firstAttribute="top" secondItem="xnt-h6-8IE" secondAttribute="bottom" constant="34" id="CSL-Wt-MVu"/>
+                            <constraint firstItem="0jZ-y8-0jZ" firstAttribute="top" secondItem="xnt-h6-8IE" secondAttribute="bottom" constant="186" id="Maj-iY-Kdl"/>
                             <constraint firstAttribute="trailingMargin" secondItem="ciR-sZ-FZ2" secondAttribute="trailing" constant="38" id="Om8-7U-by1"/>
+                            <constraint firstItem="0jZ-y8-0jZ" firstAttribute="leading" secondItem="UL4-41-g9d" secondAttribute="leadingMargin" constant="24" id="YA6-sp-2hD"/>
                             <constraint firstItem="ciR-sZ-FZ2" firstAttribute="top" secondItem="xnt-h6-8IE" secondAttribute="bottom" constant="34" id="ebo-73-eKA"/>
                             <constraint firstItem="5ws-cg-MTP" firstAttribute="centerX" secondItem="UL4-41-g9d" secondAttribute="centerX" id="npf-QX-1ot"/>
                             <constraint firstItem="yUs-Sm-sG1" firstAttribute="top" secondItem="5ws-cg-MTP" secondAttribute="bottom" constant="98" id="pD0-wQ-8Qu"/>
@@ -148,13 +157,16 @@
                             <mask key="subviews">
                                 <exclude reference="ciR-sZ-FZ2"/>
                                 <exclude reference="5ws-cg-MTP"/>
+                                <exclude reference="0jZ-y8-0jZ"/>
                             </mask>
                             <mask key="constraints">
-                                <exclude reference="npf-QX-1ot"/>
-                                <exclude reference="Om8-7U-by1"/>
-                                <exclude reference="ebo-73-eKA"/>
                                 <exclude reference="CSL-Wt-MVu"/>
                                 <exclude reference="z10-mx-OKQ"/>
+                                <exclude reference="Maj-iY-Kdl"/>
+                                <exclude reference="YA6-sp-2hD"/>
+                                <exclude reference="Om8-7U-by1"/>
+                                <exclude reference="ebo-73-eKA"/>
+                                <exclude reference="npf-QX-1ot"/>
                                 <exclude reference="pD0-wQ-8Qu"/>
                             </mask>
                         </variation>
@@ -162,13 +174,16 @@
                             <mask key="subviews">
                                 <include reference="ciR-sZ-FZ2"/>
                                 <include reference="5ws-cg-MTP"/>
+                                <include reference="0jZ-y8-0jZ"/>
                             </mask>
                             <mask key="constraints">
-                                <include reference="npf-QX-1ot"/>
-                                <include reference="Om8-7U-by1"/>
-                                <include reference="ebo-73-eKA"/>
                                 <include reference="CSL-Wt-MVu"/>
                                 <include reference="z10-mx-OKQ"/>
+                                <include reference="Maj-iY-Kdl"/>
+                                <include reference="YA6-sp-2hD"/>
+                                <include reference="Om8-7U-by1"/>
+                                <include reference="ebo-73-eKA"/>
+                                <include reference="npf-QX-1ot"/>
                                 <include reference="pD0-wQ-8Qu"/>
                             </mask>
                         </variation>
@@ -198,6 +213,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="chipmunk" width="100" height="100"/>
         <image name="fastButton" width="100" height="100"/>
         <image name="microphone" width="100" height="100"/>
         <image name="slowButton" width="100" height="100"/>

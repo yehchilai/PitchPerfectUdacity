@@ -62,7 +62,7 @@ class RecordsoundsViewController: UIViewController , AVAudioRecorderDelegate{
         {
             //TODO: Step 1 - save the recorded audio
             let recordedAudio = RecordedAudio()
-            recordedAudio.filePathUsl = recorder.url
+            recordedAudio.filePathUrl = recorder.url
             recordedAudio.title = recorder.url.lastPathComponent
             //TODO: Step 2 - move to the next scene aka perform seque
             self.performSegueWithIdentifier("stopRecording", sender: recordedAudio)
@@ -71,6 +71,14 @@ class RecordsoundsViewController: UIViewController , AVAudioRecorderDelegate{
             print("Recording was not successful")
             recordButton.hidden = true;
             stopButton.enabled = true;
+        }
+    }
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if(segue.identifier == "stopRecording"){
+            let playSoundVC:PlaySoundViewController = segue.destinationViewController as! PlaySoundViewController
+            let data = sender as! RecordedAudio
+            playSoundVC.receivedAudio = data
         }
     }
 
