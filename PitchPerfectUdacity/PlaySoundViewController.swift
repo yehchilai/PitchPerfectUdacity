@@ -49,10 +49,16 @@ class PlaySoundViewController: UIViewController {
     
     @IBAction func stopSound(sender: UIButton) {
         audioPlayer.stop()
+        audioEngine.stop()
+        audioEngine.reset()
     }
     
     @IBAction func playChipmunkSound(sender: UIButton) {
         playSoundWithPitch(1000)
+    }
+    
+    @IBAction func playDarthVaderSound(sender: UIButton) {
+        playSoundWithPitch(-1000)
     }
     
     func playSoundWithPitch(pitch: float_t){
@@ -74,10 +80,11 @@ class PlaySoundViewController: UIViewController {
         try!audioEngine.start()
         audioPlayerNode.play()
     }
-    
     func playSound(rate : float_t)
     {
         audioPlayer.stop()
+        audioEngine.stop()
+        audioEngine.reset()
         audioPlayer.rate = rate
         audioPlayer.currentTime = 0.0
         audioPlayer.play()

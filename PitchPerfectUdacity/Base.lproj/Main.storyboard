@@ -141,6 +141,13 @@
                                     <action selector="playChipmunkSound:" destination="a8N-la-bpd" eventType="touchUpInside" id="DFh-el-PWf"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TJb-1V-xvs" userLabel="DarthVaderButton">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <state key="normal" image="darthVaderButton"/>
+                                <connections>
+                                    <action selector="playDarthVaderSound:" destination="a8N-la-bpd" eventType="touchUpInside" id="7C4-rO-rmi"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -149,8 +156,10 @@
                             <constraint firstAttribute="trailingMargin" secondItem="ciR-sZ-FZ2" secondAttribute="trailing" constant="38" id="Om8-7U-by1"/>
                             <constraint firstItem="0jZ-y8-0jZ" firstAttribute="leading" secondItem="UL4-41-g9d" secondAttribute="leadingMargin" constant="24" id="YA6-sp-2hD"/>
                             <constraint firstItem="ciR-sZ-FZ2" firstAttribute="top" secondItem="xnt-h6-8IE" secondAttribute="bottom" constant="34" id="ebo-73-eKA"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="TJb-1V-xvs" secondAttribute="trailing" constant="38" id="i8F-Uo-9kN"/>
                             <constraint firstItem="5ws-cg-MTP" firstAttribute="centerX" secondItem="UL4-41-g9d" secondAttribute="centerX" id="npf-QX-1ot"/>
                             <constraint firstItem="yUs-Sm-sG1" firstAttribute="top" secondItem="5ws-cg-MTP" secondAttribute="bottom" constant="98" id="pD0-wQ-8Qu"/>
+                            <constraint firstItem="TJb-1V-xvs" firstAttribute="top" secondItem="xnt-h6-8IE" secondAttribute="bottom" constant="186" id="vw1-E9-0th"/>
                             <constraint firstItem="ktu-cv-pIi" firstAttribute="leading" secondItem="UL4-41-g9d" secondAttribute="leadingMargin" constant="24" id="z10-mx-OKQ"/>
                         </constraints>
                         <variation key="default">
@@ -158,6 +167,7 @@
                                 <exclude reference="ciR-sZ-FZ2"/>
                                 <exclude reference="5ws-cg-MTP"/>
                                 <exclude reference="0jZ-y8-0jZ"/>
+                                <exclude reference="TJb-1V-xvs"/>
                             </mask>
                             <mask key="constraints">
                                 <exclude reference="CSL-Wt-MVu"/>
@@ -166,6 +176,8 @@
                                 <exclude reference="YA6-sp-2hD"/>
                                 <exclude reference="Om8-7U-by1"/>
                                 <exclude reference="ebo-73-eKA"/>
+                                <exclude reference="i8F-Uo-9kN"/>
+                                <exclude reference="vw1-E9-0th"/>
                                 <exclude reference="npf-QX-1ot"/>
                                 <exclude reference="pD0-wQ-8Qu"/>
                             </mask>
@@ -175,6 +187,7 @@
                                 <include reference="ciR-sZ-FZ2"/>
                                 <include reference="5ws-cg-MTP"/>
                                 <include reference="0jZ-y8-0jZ"/>
+                                <include reference="TJb-1V-xvs"/>
                             </mask>
                             <mask key="constraints">
                                 <include reference="CSL-Wt-MVu"/>
@@ -183,6 +196,8 @@
                                 <include reference="YA6-sp-2hD"/>
                                 <include reference="Om8-7U-by1"/>
                                 <include reference="ebo-73-eKA"/>
+                                <include reference="i8F-Uo-9kN"/>
+                                <include reference="vw1-E9-0th"/>
                                 <include reference="npf-QX-1ot"/>
                                 <include reference="pD0-wQ-8Qu"/>
                             </mask>
@@ -214,6 +229,7 @@
     </scenes>
     <resources>
         <image name="chipmunk" width="100" height="100"/>
+        <image name="darthVaderButton" width="100" height="100"/>
         <image name="fastButton" width="100" height="100"/>
         <image name="microphone" width="100" height="100"/>
         <image name="slowButton" width="100" height="100"/>
